@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col">
+        <div class="card" style="width: 18rem;"  *ngFor="let emp of employeeList">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item" (click)="getEmpDetails(emp.employeeId)">{{emp.name}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col">
+        <app-employee-details [employee]="empDetails"></app-employee-details>
+    </div>
+</div>
+
+
+
